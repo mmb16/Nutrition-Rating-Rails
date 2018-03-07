@@ -2,6 +2,7 @@ class DishesController < ApplicationController
     
     def new
         @dish = Dish.new
+        require 'pry'; binding.pry
         build_ingredients(@dish, 5)
     end
     
