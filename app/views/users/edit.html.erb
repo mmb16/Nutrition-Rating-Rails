@@ -1,0 +1,23 @@
+
+<%= form_for(@user) do |f| %>
+
+  
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_field :birthday, autocomplete: "off" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
