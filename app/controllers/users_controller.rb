@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
-        @restuarants = @user.restuarants
+        @visited_restuarants = @user.visited_restuarants
+        @owned_restuarants = @user.owned_restuarants
         #require 'pry'; binding.pry
     end
     

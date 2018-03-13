@@ -1,8 +1,9 @@
 class DishesController < ApplicationController
     
     def new
+        @restuarant = Restuarant.find(params[:restuarant_id])
         @dish = Dish.new
-        require 'pry'; binding.pry
+        #require 'pry'; binding.pry
         build_ingredients(@dish, 5)
     end
     
@@ -15,8 +16,9 @@ class DishesController < ApplicationController
     end
 
     def create
-        @dish = Dish.create(dish_params)
-        require 'pry'; binding.pry
+        @dish = Dish.new(dish_params)
+        @dish.restuarant_id = params[:restuarant_id]
+        @dish.save
         redirect_to(@dish)
     end
 

@@ -1,0 +1,20 @@
+X User can edit user info
+
+X Visitor can visit restaurant
+X Visitor can view visited restaurants
+Visitor can rate dishes of visited restaurants
+
+X Owner can create restaurant
+Owner can view visitor profiles
+Owner can view average rating of each dish
+Owner can create dishes
+Owner can create ingredients
+Owner can assign ingredients to a dish
+
+Restaurants have many dishes
+X Restaurants belongs_to owner
+X Restaurant has_many visitors
+
+Dishes have many ratings by many visitors
+Dishes have many ingredients
+

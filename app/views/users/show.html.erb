@@ -4,12 +4,8 @@ Phone: <%= @user.phone_number %><br>
 
 Birthday: <%= @user.birthday %><br>
 
-Restaurants Visited: <% @restuarants.each do |restuarant| %>
-                        <%= link_to restuarant.name restuarant_path(restaurant) %> number of visits
-                        <% end %>
-                        
-Add Restaurant <%= form_for(@user) do |f| %>
-  <%= f.collection_select :restuarants, Restuarant.all, :id, :name %>
-  <%= f.submit %>
-  
+Restaurants visited | Visits: <br>
+<% @visited_restuarants.each do |restuarant| %>
+    <%= link_to restuarant.name, restuarant_path(restuarant) %>
+    <%= restuarant.user_restuarants.total_visits %> <br>
 <% end %>
